@@ -10,6 +10,7 @@ const axiosClient = axios.create({
 const getToken = () => {
   const cookieValue = Cookies.get("user");
   return cookieValue;
+  
 };
 
 // Add an interceptor to the custom Axios instance
