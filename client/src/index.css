@@ -29,3 +29,8 @@ body{
   border-bottom: 1px solid #6B7280;
   margin-bottom: 10px;
 }
+
+.no-scrollbar{
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

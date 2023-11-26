@@ -25,6 +25,6 @@ app.get("/", (req, res) => {
 });
 app.use(require("./routes/login"));
 
-app.use("/api", auth, require("./routes/FriendManagement/friendManagement"));
+app.use("/api", auth, require("./routes/index"));
 
 module.exports = app;

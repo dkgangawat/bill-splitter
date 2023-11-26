@@ -1,6 +1,5 @@
 const express = require("express");
 const router = new express.Router();
-const bcrypt = require("bcrypt");
 const Friends = require("../../models/FriendsSchema");
 
 //rooute add Friend
