@@ -6,6 +6,7 @@ export default {
       'primary': '#0F0F0F',
       'secondary': '#008170',
       'danger': '#EF4444',  
+      "danger2": "#B31312",
       'success': '#10B981',
       'warning': '#F59E0B',
       'info': '#3B82F6',

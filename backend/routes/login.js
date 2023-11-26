@@ -38,9 +38,9 @@ router.post("/login", async (req, res) => {
     if (!isPasswordMatch) {
       return res.status(401).json({ error: "Invalid password" });
     }
-
-    const token = generateToken(user.b_id);
-    res.cookie("user", token);
+    
+    const token = generateToken(user._id);
+    res.cookie("token", token);
     res.json({ success:true, message: "Login successful", user, token });
   } catch (error) {
     logger.error("Error during user login:", error);

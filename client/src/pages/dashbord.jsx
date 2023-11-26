@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className=' sideBar '>
       <Sidebar />
       </div>
-      <div className={` main text-white ${showSidebar && " overflow-hidden"}`}>
+      <div className={` main w-full text-white ${showSidebar && " overflow-hidden"} p-4`}>
       <Outlet />
       </div>
       </div>

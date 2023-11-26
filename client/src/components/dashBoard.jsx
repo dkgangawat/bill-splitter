@@ -1,208 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const DashboardHome = () => {
+  const [Expantion , setExpention]  = useState([]);
   return (
-    <div>Bonus: Implement Google OAuth for a seamless login experience.
-    Friend Management:
-    ● Users can add friends using their email IDs.
-    Dashboard:
-    ● The main page should display the amount owed to the user and the
-    amounts they owe to others.
-    Expense Management:
-    ● Users should be able to add expenses, specifying the amount and the
-    number of people to split the expense with.
-    ● The application should perform the necessary calculations to determine
-    the amount each person owes.
-    Real-time Updates:
-    ● When friends log in, they should see the amounts they owe or are owed.
-    Comments/Labels:
-    ● Users should be able to add comments or labels to specify the reason for
-    splitting the expense.
-    Settlement:
-    ● Once an amount is settled, there should be a "Settled" button that, when
-    clicked, hides the owed amount and marks it as settled.
-    Activity History:
-    ● Include a separate tab showing the history of activities, such as who owes
-    what, what is owed to them, and the settlement status.
-    Group Management:
-    ● Users should be able to create groups for trips or hangouts.
-    ● Add people to the group and directly add amounts owed within the grou
-    Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-Bonus: Implement Google OAuth for a seamless login experience.
-Friend Management:
-● Users can add friends using their email IDs.
-Dashboard:
-● The main page should display the amount owed to the user and the
-amounts they owe to others.
-Expense Management:
-● Users should be able to add expenses, specifying the amount and the
-number of people to split the expense with.
-● The application should perform the necessary calculations to determine
-the amount each person owes.
-Real-time Updates:
-● When friends log in, they should see the amounts they owe or are owed.
-Comments/Labels:
-● Users should be able to add comments or labels to specify the reason for
-splitting the expense.
-Settlement:
-● Once an amount is settled, there should be a "Settled" button that, when
-clicked, hides the owed amount and marks it as settled.
-Activity History:
-● Include a separate tab showing the history of activities, such as who owes
-what, what is owed to them, and the settlement status.
-Group Management:
-● Users should be able to create groups for trips or hangouts.
-● Add people to the group and directly add amounts owed within the grou
-    
+    <div className=' w-full'>
+    <div className='  w-full'>
+    <button className=' py-1 px-2 bg-danger hover:bg-danger2 rounded-sm block ml-auto'>Add Expention</button>
+    </div>
+    {
+      Expantion.length > 0 ? (
+        <div className=''>
+        </div>
+      ) : (
+        <div className=' flex justify-center  flex-col items-center select-none text-center my-5'>
+        {/* <i className='fas fa-5x fa-sad-tear text-gray'></i> */}
+        <i className='fa-solid fa-check fa-5x text-gray'></i>
+        <h1 className='text-center text-2xl font-bold text-gray'>You All Settle</h1>
+        <span className=' text-gray'>Add An by Above Add Expantion Button</span>
+        </div>
+      )
+    }
     </div>
   )
 }

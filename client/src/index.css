@@ -22,7 +22,7 @@ body{
   font-family: 'Red Hat Text', sans-serif;
 }
 
-.signup input, .login input{
+.signup input, .login input, input{
   background: transparent;
   border: none;
   outline: none;

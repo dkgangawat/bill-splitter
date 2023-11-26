@@ -21,12 +21,13 @@ const Login = () => {
         password,
       };
       try {
-        const res = await axiosClient.post("/api/login", user);
+        const res = await axiosClient.post("/login", user);
         if (res.data.success) {
           setUser(res.data.user);
           const expirationTime = new Date();
           expirationTime.setHours(expirationTime.getHours() + 12);
           const token = res.data.token;
+          console.log(token)
           Cookies.set("token", token, { expires: expirationTime });
           // set user in session storage to persist user on page refresh
           sessionStorage.setItem("user", JSON.stringify(res.data.user));

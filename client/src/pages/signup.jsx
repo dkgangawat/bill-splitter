@@ -20,7 +20,7 @@ const Signup = () => {
         password,
       };
       try {
-        const res = await axiosClient.post("/api/signup", user);
+        const res = await axiosClient.post("/signup", user);
         res.data.success && window.location.replace("/");
       } catch (error) {
         console.log(error);

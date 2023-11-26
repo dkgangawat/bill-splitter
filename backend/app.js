@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const { auth } = require("./middleware/auth");
 
 require("./config/db");
 require("dotenv").config();
@@ -17,15 +18,13 @@ app.use(
     credentials: true,
   })
 );
-// Serve static files
-
-// Internal routes
-const internalRouter = new express.Router();
 
 // App routes
 app.get("/", (req, res) => {
   res.send("Welcome to BillSplit API");
 });
-app.use("/api", require("./routes/login"));
+app.use(require("./routes/login"));
+
+app.use("/api", auth, require("./routes/FriendManagement/friendManagement"));
 
 module.exports = app;

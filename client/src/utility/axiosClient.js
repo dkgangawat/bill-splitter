@@ -8,7 +8,7 @@ const axiosClient = axios.create({
 
 // Define a function to get the token from the cookie
 const getToken = () => {
-  const cookieValue = Cookies.get("user");
+  const cookieValue = Cookies.get("token");
   return cookieValue;
   
 };
