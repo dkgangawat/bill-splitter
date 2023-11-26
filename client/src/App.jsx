@@ -10,13 +10,19 @@ import { UserContext } from "./context/loggedInUserContext";
 import Dashboard from "./pages/dashbord";
 import { AuthContext } from "./context/authContext";
 import PrivateRoute from "./components/PrivateRoute";
+import DashboardHome from "./components/dashBoard";
+import History from "./components/history";
+import Group from "./components/group";
+import { useLocation } from 'react-router-dom';
+import Friends from "./components/Friends";
 const App = () => {
   const { user } = useContext(UserContext);
   const {isAuthenticated} = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     //if user exists then redirect to deshboard
-    if (user) {
+    if (user && location.pathname === "/login") {
       navigate("/dashboard");
     }
   }, [user]);
@@ -28,12 +34,17 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={ <PrivateRoute><Dashboard /></PrivateRoute> }/>
+          <Route path="/dashboard" element={ <PrivateRoute><Dashboard /></PrivateRoute> }>
+            <Route path="/dashboard" element= {<DashboardHome/>} />
+            <Route path="/dashboard/history" element= {<History/>} />
+            <Route path="/dashboard/group" element= {<Group/>} />
+            <Route path="/dashboard/friends" element= {<Friends/>} />
+          </Route>
         </Routes>
         <Footer />
       </div>
     </>
-  );a
+  );
 };
 
 export default App;

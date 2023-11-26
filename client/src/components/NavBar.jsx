@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../context/loggedInUserContext";
 import Cookies from "js-cookie";
 import logo from "../assets/logo.png"
+import { MobileMenuContext } from "../context/mobilemenuContext";
 
 const NavBar = () => {
   const [profileDropdown, setProfileDropdown] = useState(false);
   const { user } = useContext(UserContext);
+  const { showSidebar, setShowSidebar } = useContext(MobileMenuContext);
 
   const profileDropdownHandler = () => {
     setProfileDropdown(!profileDropdown);
@@ -22,7 +24,11 @@ const NavBar = () => {
   return (
     <>
       <div className=" flex px-4  border-b border-b-gray justify-between items-center text-white py-4 sticky top-0 bg-primary">
+      <div className=" flex gap-2 items-center">
+        <i className="fa-solid fa-bars text-white text-xl   w-[40px] text-center md:hidden block cursor-pointer " onClick={(e)=>{setShowSidebar(!showSidebar)}}></i>
         <Link to="/"><img src={logo} className=" h-[40px]" alt="logo"/></Link>
+      </div>
+      
         <div>
           {/* data to show when user logged in */}
           {user ? (
