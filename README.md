@@ -73,9 +73,9 @@ Make sure you have the following installed:
    npm install
    ```
 
-# .env File
+4. ### .env File
 
-4. make sure to add the .env file in both client dir and backend dir
+   make sure to add the .env file in both client dir and backend dir
    The `.env` file is used to manage environment variables for the Bill Splitter App. It contains sensitive information and configuration details that should not be exposed in your version control system.
 
    ### client .env file
