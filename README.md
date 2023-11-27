@@ -78,13 +78,13 @@ Make sure you have the following installed:
 4. make sure to add the .env file in both client dir and backend dir
    The `.env` file is used to manage environment variables for the Bill Splitter App. It contains sensitive information and configuration details that should not be exposed in your version control system.
 
-   # client .env file
+   ### client .env file
 
    ```bash
    VITE_API_SERVER = "http://localhost:8000"
    ```
 
-   # backend or server .env file
+   ### backend or server .env file
 
    ```bash
    MONGO_URI = "your-mongoDB-URI"
@@ -107,13 +107,13 @@ Make sure you have the following installed:
 
 ## Technologies Used
 
-# Frontend:
+### Frontend:
 
 React
 Vite
 Axios (for API communication)
 
-# Backend:
+### Backend:
 
 Express.js
 MongoDB
