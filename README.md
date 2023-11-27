@@ -109,12 +109,13 @@ Make sure you have the following installed:
 
 ### Frontend:
 
-React
-Vite
-Axios (for API communication)
+`React`
+`Vite`
+`Axios` (for API communication)
 
 ### Backend:
 
-Express.js
-MongoDB
-JWT for authentication
+`Node js`
+`Express.js`
+`MongoDB`
+`JWT` for authentication
