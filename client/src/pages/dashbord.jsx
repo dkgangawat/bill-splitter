@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className=' sideBar '>
       <Sidebar />
       </div>
-      <div className={` main w-full text-white ${showSidebar && " overflow-hidden"} p-4`}>
+      <div className={` main w-screen md:w-full text-white ${showSidebar && " overflow-hidden"} p-4`}>
       <Outlet />
       </div>
       </div>

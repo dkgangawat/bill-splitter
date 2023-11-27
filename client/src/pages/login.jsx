@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/loggedInUserContext";
 import axiosClient from "../utility/axiosClient";
@@ -6,11 +6,12 @@ import Cookies from "js-cookie";
 import { AuthContext } from "../context/authContext";
 
 const Login = () => {
-  const {  setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const { setIsAuthenticated } = useContext(AuthContext);
   const [passwordIncorrect, setPasswordIncorrect] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const loginButton = useRef(null);
   const loginHandler = async (e) => {
     e.preventDefault();
     if (!email || !password) {
@@ -21,7 +22,11 @@ const Login = () => {
         password,
       };
       try {
+        loginButton.current.disabled = true;
+        loginButton.current.innerHTML = "Logging in...";
         const res = await axiosClient.post("/login", user);
+        loginButton.current.disabled = false;
+        loginButton.current.innerHTML = "Login";
         if (res.data.success) {
           setUser(res.data.user);
           const expirationTime = new Date();
@@ -42,7 +47,7 @@ const Login = () => {
         }
       } catch (error) {
         console.log(error);
-        if(error.response?.status === 401){
+        if (error.response?.status === 401) {
           //set the color of input border and label to red
           document.querySelectorAll("input").forEach((input) => {
             input.style.borderColor = "red";
@@ -65,8 +70,7 @@ const Login = () => {
             <div className=" text-center text-danger2 text-xs italic">
               Incorrect password
             </div>
-          )
-            }
+          )}
           <form className=" flex flex-col gap-2 px-4" onSubmit={loginHandler}>
             <label className=" text-sm">Email</label>
             <input
@@ -87,6 +91,7 @@ const Login = () => {
               className=" bg-gray2 border border-gray rounded-sm py-1 px-2"
             ></input>
             <button
+              ref={loginButton}
               type="submit"
               className=" bg-secondary w-fit mx-auto py-1 px-4 hover:bg-success text-white  rounded-sm font-bold"
             >
