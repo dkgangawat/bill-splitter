@@ -15,9 +15,11 @@ import History from "./components/history";
 import Group from "./components/group";
 import { useLocation } from 'react-router-dom';
 import Friends from "./components/Friends";
+import { MobileMenuContext } from "./context/mobilemenuContext";
 const App = () => {
   const { user } = useContext(UserContext);
   const {isAuthenticated} = useContext(AuthContext);
+  const { showSidebar } = useContext(MobileMenuContext);
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
@@ -28,7 +30,7 @@ const App = () => {
   }, [user]);
   return (
     <>
-      <div className=" max-w-[1200px] mx-auto relative">
+      <div className={` max-w-[1200px] mx-auto relative ${showSidebar ? " overflow-x-hidden" :""} `}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

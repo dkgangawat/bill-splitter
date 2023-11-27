@@ -7,11 +7,11 @@ const Dashboard = () => {
   const { showSidebar } = useContext(MobileMenuContext);
   return (
     <>
-      <div className=' flex'>
-      <div className=' sideBar '>
+      <div className={` inline-flex ${showSidebar ? " overflow-hidden" :""}`}>
+      <div className={` sideBar inline-block  `}>
       <Sidebar />
       </div>
-      <div className={` main w-screen md:w-full text-white ${showSidebar && " overflow-hidden"} p-4`}>
+      <div className={` main w-screen inline-block md:w-full text-white  p-4`}>
       <Outlet />
       </div>
       </div>
