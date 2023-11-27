@@ -62,11 +62,59 @@ Make sure you have the following installed:
    cd bill-splitter
    ```
 3. Install dependencies:
+
    ```bash
    # For the client (React/Vite app)
      cd client
     npm install
-   ```
+
    # For the backend (Express.js server)
    cd ../backend
    npm install
+   ```
+
+# .env File
+
+4. make sure to add the .env file in both client dir and backend dir
+   The `.env` file is used to manage environment variables for the Bill Splitter App. It contains sensitive information and configuration details that should not be exposed in your version control system.
+
+   # client .env file
+
+   ```bash
+   VITE_API_SERVER = "http://localhost:8000"
+   ```
+
+   # backend or server .env file
+
+   ```bash
+   MONGO_URI = "your-mongoDB-URI"
+   JWT_SECRET_KEY = "Your-secrete-key-for-JWT"
+
+   ```
+
+## Usage
+
+1.  Start the backend server:
+    ```bash
+    cd ../backend
+    npm run dev
+    ```
+2.  Start the client application:
+    ```bash
+    cd ../client
+    npm run dev
+    ```
+
+## Technologies Used
+
+# Frontend:
+
+React
+Vite
+Axios (for API communication)
+
+# Backend:
+
+Express.js
+MongoDB
+JWT for authentication
