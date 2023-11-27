@@ -29,7 +29,7 @@ const Sidebar = () => {
       <div
         className={` ${showSidebar ? "  w-[200px] border-r border-r-gray" : "  w-[0]"}  md:flex  md:border-r md:border-r-gray flex-col text-gray font-bold overflow-hidden md:overflow-auto w-0   h-[80vh]  md:w-[200px]  `}
       >
-      <div className=" ">
+      <div className=" " onClick={()=>setShowSidebar(false)}>
       {siderBarLinks.map((link, index) => (
           <Link
             key={index}
