@@ -21,7 +21,7 @@ The Bill Splitter App simplifies the process of managing shared expenses among f
 
 ## Features
 
-- **Login/Signup Feature:** Users can sign up for an account or log in using existing credentials. Bonus: Google OAuth for seamless login.
+- **Login/Signup Feature:** Users can sign up for an account or log in using existing credentials, Google OAuth for seamless login.
 
 - **Friend Management:** Users can add friends using their email IDs.
 
