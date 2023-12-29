@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MobileMenuContext } from "../context/mobilemenuContext";
 import { GroupContext } from "../context/groupContext";
@@ -27,7 +27,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={` ${showSidebar ? "  w-[200px] border-r border-r-gray" : "  w-[0]"}  md:flex  md:border-r md:border-r-gray flex-col text-gray font-bold overflow-hidden md:overflow-auto w-0   h-[80vh]  md:w-[200px]  `}
+        className={` ${showSidebar ? "  w-[200px] " : "  w-[0]"}  md:flex   flex-col text-gray font-bold overflow-hidden md:overflow-auto w-0   h-[80vh]  md:w-[200px]  `}
       >
       <div className=" " onClick={()=>setShowSidebar(false)}>
       {siderBarLinks.map((link, index) => (

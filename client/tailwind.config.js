@@ -3,9 +3,10 @@ export default {
   content: [ "./index.html",,'./src/**/*.{js,ts,jsx,tsx,mdx,html}'],
   theme: {
     colors: {
-      'primary': '#0F0F0F',
+      'primary': '#0e0d11',
       'secondary': '#008170',
-      'danger': '#EF4444',  
+      'danger': '#EF4444',
+      'cardbg': '#1d1b22',
       "danger2": "#B31312",
       'success': '#10B981',
       'warning': '#F59E0B',

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Home from "./pages/home";
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -8,7 +8,6 @@ import Login from "./pages/login";
 import Footer from "./components/footer";
 import { UserContext } from "./context/loggedInUserContext";
 import Dashboard from "./pages/dashbord";
-import { AuthContext } from "./context/authContext";
 import PrivateRoute from "./components/PrivateRoute";
 import DashboardHome from "./components/dashBoard";
 import History from "./components/history";
@@ -18,7 +17,6 @@ import Friends from "./components/Friends";
 import { MobileMenuContext } from "./context/mobilemenuContext";
 const App = () => {
   const { user } = useContext(UserContext);
-  const {isAuthenticated} = useContext(AuthContext);
   const { showSidebar } = useContext(MobileMenuContext);
   const navigate = useNavigate();
   const location = useLocation();

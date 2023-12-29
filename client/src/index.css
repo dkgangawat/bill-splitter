@@ -13,7 +13,7 @@
 }
 
 body{
-  background-color: #0F0F0F;
+  background-color: #0e0d11;
   position: relative;
 }
 
@@ -33,4 +33,22 @@ body{
 .no-scrollbar{
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282a37;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
