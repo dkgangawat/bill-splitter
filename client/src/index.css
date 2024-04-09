@@ -39,8 +39,25 @@ body::after{
   background-image: radial-gradient(circle, #2e2d2d 2px, transparent 0);
   background-size: 100px 100px;
   z-index: -10;
+  animation: bounce 5s linear infinite;
 
 }
+
+@keyframes bounce {
+  0% {
+    opacity: 0.5;
+    size: 0px;
+  }
+  50% {
+    opacity: 1;
+    size: 100px;
+  }
+  100% {
+    opacity: 0;
+    size: 0px;
+  }
+} 
+
 .font-red-hat{
   font-family: 'Indie Flower', cursive;
   font-family: 'Red Hat Text', sans-serif;
