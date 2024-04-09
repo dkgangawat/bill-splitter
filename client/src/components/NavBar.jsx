@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/loggedInUserContext";
 import Cookies from "js-cookie";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 import { MobileMenuContext } from "../context/mobilemenuContext";
 
 const NavBar = () => {
@@ -23,12 +23,19 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" flex px-4 z-50 border-b border-b-gray justify-between items-center text-white py-4 sticky top-0 bg-primary">
-      <div className=" flex gap-2 items-center">
-        <i className="fa-solid fa-bars text-white text-xl   w-[40px] text-center md:hidden block cursor-pointer " onClick={(e)=>{setShowSidebar(!showSidebar)}}></i>
-        <Link to="/"><img src={logo} className=" h-[40px]" alt="logo"/></Link>
-      </div>
-      
+      <div className=" flex px-6 z-50 border-b justify-between items-center text-white py-2 sticky top-2  backdrop-blur-md rounded-[20px]">
+        <div className=" flex gap-2 items-center">
+          <i
+            className="fa-solid fa-bars text-white text-xl   w-[40px] text-center md:hidden block cursor-pointer "
+            onClick={(e) => {
+              setShowSidebar(!showSidebar);
+            }}
+          ></i>
+          <Link to="/">
+            <img src={logo} className=" h-[40px]" alt="logo" />
+          </Link>
+        </div>
+
         <div>
           {/* data to show when user logged in */}
           {user ? (
@@ -48,10 +55,16 @@ const NavBar = () => {
                 <div className=" absolute bg-gray2 border border-gray rounded-sm mt-2 min-w-[100px] w-full min-h-[100px] top-full">
                   <i className="fa-solid fa-caret-up absolute -top-2 left-3/4"></i>
                   <div className=" flex flex-col gap-2 p-2 text-black">
-                    <Link to="/profile" className=" hover:underline hover:italic">
+                    <Link
+                      to="/profile"
+                      className=" hover:underline hover:italic"
+                    >
                       Profile
                     </Link>
-                    <Link to="/settings" className=" hover:underline hover:italic">
+                    <Link
+                      to="/settings"
+                      className=" hover:underline hover:italic"
+                    >
                       Settings
                     </Link>
                     <button
