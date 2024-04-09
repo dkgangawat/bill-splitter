@@ -63,8 +63,8 @@ const Login = () => {
 
   return (
     <>
-      <div className=" flex justify-center items-center h-screen  text-gray login">
-        <div className=" w-[400px] h-[500px] border border-gray rounded-lg shadow-lg py-4 ">
+      <div className=" flex justify-center items-center    text-gray login">
+        <div className=" w-[400px] h-[500px] border border-gray rounded-lg shadow-lg py-4 bg-gradient-to-br from-[#ffffff30] to-transparent backdrop-blur-md ">
           <div className=" text-center font-bold text-2xl py-4">Login</div>
           {passwordIncorrect && (
             <div className=" text-center text-danger2 text-xs italic">

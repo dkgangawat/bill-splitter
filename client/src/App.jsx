@@ -33,26 +33,28 @@ const App = () => {
           showSidebar ? " overflow-x-hidden" : ""
         }`}
       >
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/dashboard"
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          >
-            <Route path="/dashboard" element={<DashboardHome />} />
-            <Route path="/dashboard/history" element={<History />} />
-            <Route path="/dashboard/group/:groupid" element={<Group />} />
-            <Route path="/dashboard/friends" element={<Friends />} />
-          </Route>
-        </Routes>
-        <Footer />
+        <div className=" flex flex-col gap-4">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            >
+              <Route path="/dashboard" element={<DashboardHome />} />
+              <Route path="/dashboard/history" element={<History />} />
+              <Route path="/dashboard/group/:groupid" element={<Group />} />
+              <Route path="/dashboard/friends" element={<Friends />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </>
   );
