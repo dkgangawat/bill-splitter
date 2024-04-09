@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" flex px-6 z-50 justify-between items-center text-white py-2 sticky top-2  backdrop-blur-md rounded-[20px]">
+      <div className=" flex px-2 z-50 justify-between items-center text-white py-2 sticky top-2 bg-gradient-to-br from-[#ffffff30] to-transparent  backdrop-blur-md rounded-[20px]">
         <div className=" flex gap-2 items-center">
           <i
             className="fa-solid fa-bars text-white text-xl   w-[40px] text-center md:hidden block cursor-pointer "
@@ -79,10 +79,7 @@ const NavBar = () => {
             </div>
           ) : (
             <div className=" flex gap-2">
-              <Link
-                to="/login"
-                className=" bg-secondary py-1 px-4 hover:bg-success  rounded-sm font-bold"
-              >
+              <Link to="/login" className=" py-1 px-4  rounded-sm font-bold">
                 Login
               </Link>
               {/* <Link to="/signup" className=" text-secondary underline hover:italic">Sign up</Link> */}
