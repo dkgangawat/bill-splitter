@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" flex px-6 z-50 border-b justify-between items-center text-white py-2 sticky top-2  backdrop-blur-md rounded-[20px]">
+      <div className=" flex px-6 z-50 justify-between items-center text-white py-2 sticky top-2  backdrop-blur-md rounded-[20px]">
         <div className=" flex gap-2 items-center">
           <i
             className="fa-solid fa-bars text-white text-xl   w-[40px] text-center md:hidden block cursor-pointer "

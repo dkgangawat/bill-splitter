@@ -16,6 +16,7 @@ body{
   background-image: linear-gradient(135deg, #244991 0%, #000000 100%);
   background-attachment: fixed;
   position: relative;
+  margin: 0 32px;
 }
 body::before{
   content: '';
